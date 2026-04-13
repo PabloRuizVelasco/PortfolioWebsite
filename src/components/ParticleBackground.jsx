@@ -21,7 +21,7 @@ export default function ParticleBackground() {
 
     const animate = () => {
       // Semi-transparent black overlay for trail effect
-      ctx.fillStyle = 'rgba(5, 5, 5, 0.06)'
+      ctx.fillStyle = 'rgba(5, 5, 5, 0.03)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       ctx.font = `${fontSize}px 'JetBrains Mono', monospace`
@@ -46,7 +46,7 @@ export default function ParticleBackground() {
         if (y * fontSize > canvas.height && Math.random() > 0.975) {
           columns[i] = 0
         }
-        columns[i] += 0.5 + Math.random() * 0.5
+        columns[i] += 0.12 + Math.random() * 0.13
       })
 
       animationId = requestAnimationFrame(animate)
@@ -68,7 +68,7 @@ export default function ParticleBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.4 }}
+      style={{ opacity: 0.3 }}
     />
   )
 }
