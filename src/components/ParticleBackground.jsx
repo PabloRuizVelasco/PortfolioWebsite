@@ -46,7 +46,7 @@ export default function ParticleBackground() {
         if (y * fontSize > canvas.height && Math.random() > 0.975) {
           columns[i] = 0
         }
-        columns[i] += 0.12 + Math.random() * 0.13
+        columns[i] += 0.04 + Math.random() * 0.04
       })
 
       animationId = requestAnimationFrame(animate)
