@@ -25,7 +25,7 @@ const highlights = [
   {
     icon: HiUserGroup,
     title: 'Leadership',
-    desc: 'Kappa Sigma Treasurer & Philanthropy',
+    desc: 'Kappa Sigma Treasurer & Philanthropy lead — raised over $13,000 for disabled veterans',
     color: 'from-amber-500 to-orange-500',
   },
 ]
@@ -55,9 +55,7 @@ export default function About() {
             I'm a Computer Science student at UT Dallas with a strong foundation in
             algorithms, data structures, and software development. I hold CompTIA
             Security+ and AWS Cloud certifications, and I'm passionate about building
-            solutions that make an impact. As Kappa Sigma's Treasurer and Philanthropy
-            lead, I raised over $13,000 for disabled veterans while honing my
-            leadership and collaboration skills.
+            solutions that make an impact.
           </p>
         </motion.div>
 
