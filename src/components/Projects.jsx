@@ -1,8 +1,9 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaJava, FaCode } from 'react-icons/fa'
-import { SiCplusplus } from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
 import { HiExternalLink } from 'react-icons/hi'
+import pokerImg from '../assets/images/poker.png'
+import amazonImg from '../assets/images/amazon.png'
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
     description:
       'Simulates poker games using 3D arrays to represent rounds, players, and hands. Evaluates winners based on hand rankings and calculates win percentages across simulations.',
     tech: ['C++', '3D Arrays', 'Simulation', 'Statistics'],
-    icon: SiCplusplus,
+    image: pokerImg,
     gradient: 'from-emerald-500 to-teal-500',
     highlights: ['Multi-round simulation', 'Hand ranking evaluation', 'Win percentage tracking'],
   },
@@ -37,7 +38,7 @@ const projects = [
     description:
       'A delivery route tracker for Amazon Prime drivers. Calculates polygon areas from coordinate-based routes stored in 3D arrays, with formatted output for each driver.',
     tech: ['Java', 'C++', 'Geometry', 'File I/O'],
-    icon: FaCode,
+    image: amazonImg,
     gradient: 'from-amber-500 to-orange-500',
     highlights: ['Polygon area calculation', 'Dual-language implementation', 'Route visualization'],
   },
@@ -83,9 +84,13 @@ export default function Projects() {
 
               <div className="flex items-start justify-between mb-4">
                 <div
-                  className={`w-10 h-10 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity`}
+                  className={`w-10 h-10 rounded-xl ${project.image ? 'bg-white/10' : `bg-gradient-to-br ${project.gradient}`} flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity overflow-hidden`}
                 >
-                  <project.icon className="text-white text-lg" />
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-7 h-7 object-contain" />
+                  ) : (
+                    <project.icon className="text-white text-lg" />
+                  )}
                 </div>
               </div>
 

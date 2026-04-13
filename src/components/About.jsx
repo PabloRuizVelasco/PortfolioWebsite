@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { HiAcademicCap, HiShieldCheck, HiGlobe, HiUserGroup } from 'react-icons/hi'
+import { HiAcademicCap, HiShieldCheck, HiGlobe } from 'react-icons/hi'
+import kappaSigmaImg from '../assets/images/kappa-sigma.png'
 
 const highlights = [
   {
@@ -23,7 +24,7 @@ const highlights = [
     color: 'from-emerald-500 to-teal-500',
   },
   {
-    icon: HiUserGroup,
+    image: kappaSigmaImg,
     title: 'Leadership',
     desc: 'Kappa Sigma Treasurer & Philanthropy lead — raised over $13,000 for disabled veterans',
     color: 'from-amber-500 to-orange-500',
@@ -69,9 +70,13 @@ export default function About() {
               className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-all duration-300 hover:-translate-y-1"
             >
               <div
-                className={`w-10 h-10 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 opacity-80 group-hover:opacity-100 transition-opacity`}
+                className={`w-10 h-10 rounded-xl ${item.image ? '' : `bg-gradient-to-br ${item.color}`} flex items-center justify-center mb-4 opacity-80 group-hover:opacity-100 transition-opacity overflow-hidden`}
               >
-                <item.icon className="text-white text-lg" />
+                {item.image ? (
+                  <img src={item.image} alt={item.title} className="w-full h-full object-contain" />
+                ) : (
+                  <item.icon className="text-white text-lg" />
+                )}
               </div>
               <h3 className="text-white font-semibold mb-1">{item.title}</h3>
               <p className="text-gray-500 text-sm">{item.desc}</p>
