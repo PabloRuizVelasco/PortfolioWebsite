@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaJava } from 'react-icons/fa'
+import { FaJava, FaDollarSign } from 'react-icons/fa'
 import { HiExternalLink } from 'react-icons/hi'
 import pokerImg from '../assets/images/poker.png'
 import amazonImg from '../assets/images/amazon.png'
@@ -20,7 +20,7 @@ const projects = [
     description:
       'A movie rental billing system that models Customers, Movies, and Rentals. Generates formatted statements with charges based on category-specific pricing and frequent renter points.',
     tech: ['Java', 'OOP', 'Design Patterns', 'Pricing Logic'],
-    icon: FaJava,
+    icon: FaDollarSign,
     gradient: 'from-purple-500 to-pink-500',
     highlights: ['Category-based pricing', 'Frequent renter points', 'Formatted billing output'],
   },
