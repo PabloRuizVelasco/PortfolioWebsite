@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaJava, FaDollarSign } from 'react-icons/fa'
+import { FaDollarSign, FaPlane } from 'react-icons/fa'
 import { HiExternalLink } from 'react-icons/hi'
 import pokerImg from '../assets/images/poker.png'
 import amazonImg from '../assets/images/amazon.png'
@@ -11,8 +11,8 @@ const projects = [
     description:
       'A graph-based flight planner that reads city-to-city flights with cost and time, processes trip requests, and outputs the top 3 optimal itineraries using backtracking.',
     tech: ['Java', 'Graph Algorithms', 'Backtracking', 'File I/O'],
-    icon: FaJava,
-    gradient: 'from-indigo-500 to-blue-500',
+    icon: FaPlane,
+    gradient: 'from-green-500 to-emerald-500',
     highlights: ['Optimizes by time or cost', 'Backtracking path finder', 'Top 3 itinerary output'],
   },
   {
@@ -21,7 +21,7 @@ const projects = [
       'A movie rental billing system that models Customers, Movies, and Rentals. Generates formatted statements with charges based on category-specific pricing and frequent renter points.',
     tech: ['Java', 'OOP', 'Design Patterns', 'Pricing Logic'],
     icon: FaDollarSign,
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-emerald-500 to-teal-500',
     highlights: ['Category-based pricing', 'Frequent renter points', 'Formatted billing output'],
   },
   {
@@ -30,7 +30,7 @@ const projects = [
       'Simulates poker games using 3D arrays to represent rounds, players, and hands. Evaluates winners based on hand rankings and calculates win percentages across simulations.',
     tech: ['C++', '3D Arrays', 'Simulation', 'Statistics'],
     image: pokerImg,
-    gradient: 'from-emerald-500 to-teal-500',
+    gradient: 'from-teal-500 to-cyan-500',
     highlights: ['Multi-round simulation', 'Hand ranking evaluation', 'Win percentage tracking'],
   },
   {
@@ -39,7 +39,7 @@ const projects = [
       'A delivery route tracker for Amazon Prime drivers. Calculates polygon areas from coordinate-based routes stored in 3D arrays, with formatted output for each driver.',
     tech: ['Java', 'C++', 'Geometry', 'File I/O'],
     image: amazonImg,
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-lime-500 to-green-500',
     highlights: ['Polygon area calculation', 'Dual-language implementation', 'Route visualization'],
   },
 ]
@@ -51,7 +51,7 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-32 px-6">
       {/* Ambient glow */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[128px]" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-green-500/5 rounded-full blur-[128px]" />
 
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <motion.div
@@ -60,7 +60,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-xs font-mono tracking-wider text-indigo-400 uppercase mb-3 block">
+          <span className="text-xs font-mono tracking-wider text-green-400 uppercase mb-3 block">
             Projects
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -75,7 +75,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 + 0.2 }}
-              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-all duration-500 hover:-translate-y-1"
+              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-500 hover:-translate-y-1"
             >
               {/* Gradient accent line */}
               <div
@@ -94,7 +94,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <h3 className="text-white text-lg font-semibold mb-2 group-hover:text-indigo-300 transition-colors">
+              <h3 className="text-white text-lg font-semibold mb-2 group-hover:text-green-300 transition-colors">
                 {project.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
@@ -105,7 +105,7 @@ export default function Projects() {
               <ul className="space-y-1.5 mb-5">
                 {project.highlights.map((h) => (
                   <li key={h} className="flex items-center gap-2 text-xs text-gray-500">
-                    <span className="w-1 h-1 rounded-full bg-indigo-500" />
+                    <span className="w-1 h-1 rounded-full bg-green-500" />
                     {h}
                   </li>
                 ))}
@@ -116,7 +116,7 @@ export default function Projects() {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="px-2.5 py-1 text-xs font-mono text-indigo-400/80 bg-indigo-500/5 border border-indigo-500/10 rounded-md"
+                    className="px-2.5 py-1 text-xs font-mono text-green-400/80 bg-green-500/5 border border-green-500/10 rounded-md"
                   >
                     {t}
                   </span>
@@ -136,7 +136,7 @@ export default function Projects() {
             href="https://github.com/PabloRuizVelasco"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-400 transition-colors font-mono"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-green-400 transition-colors font-mono"
           >
             View more on GitHub
             <HiExternalLink />

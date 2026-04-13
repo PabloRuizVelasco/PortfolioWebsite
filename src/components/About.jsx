@@ -9,25 +9,25 @@ const highlights = [
     icon: HiAcademicCap,
     title: 'B.S. Computer Science',
     desc: 'UT Dallas, Expected 2027',
-    color: 'from-indigo-500 to-blue-500',
+    color: 'from-green-500 to-emerald-500',
   },
   {
     icon: HiShieldCheck,
     title: 'Security Certified',
     desc: 'CompTIA Security+ & AWS Cloud',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-emerald-500 to-teal-500',
   },
   {
     icon: HiGlobe,
     title: 'Bilingual',
     desc: 'Native English & Spanish',
-    color: 'from-emerald-500 to-teal-500',
+    color: 'from-teal-500 to-cyan-500',
   },
   {
     image: kappaSigmaImg,
     title: 'Leadership',
     desc: 'Kappa Sigma Treasurer & Philanthropy lead — raised over $13,000 for disabled veterans',
-    color: 'from-amber-500 to-orange-500',
+    color: 'from-lime-500 to-green-500',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-xs font-mono tracking-wider text-indigo-400 uppercase mb-3 block">
+          <span className="text-xs font-mono tracking-wider text-green-400 uppercase mb-3 block">
             About Me
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
@@ -67,7 +67,7 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 + 0.2 }}
-              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-all duration-300 hover:-translate-y-1"
+              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300 hover:-translate-y-1"
             >
               <div
                 className={`w-10 h-10 rounded-xl ${item.image ? '' : `bg-gradient-to-br ${item.color}`} flex items-center justify-center mb-4 opacity-80 group-hover:opacity-100 transition-opacity overflow-hidden`}

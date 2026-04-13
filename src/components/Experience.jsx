@@ -46,7 +46,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative py-32 px-6">
-      <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-green-500/5 rounded-full blur-[120px]" />
 
       <div className="max-w-4xl mx-auto relative z-10" ref={ref}>
         <motion.div
@@ -55,7 +55,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-xs font-mono tracking-wider text-indigo-400 uppercase mb-3 block">
+          <span className="text-xs font-mono tracking-wider text-green-400 uppercase mb-3 block">
             Experience
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -65,7 +65,7 @@ export default function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-indigo-500/50 via-purple-500/30 to-transparent" />
+          <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-green-500/50 via-emerald-500/30 to-transparent" />
 
           <div className="space-y-12">
             {experiences.map((exp, i) => (
@@ -80,22 +80,22 @@ export default function Experience() {
                 <div
                   className={`absolute left-0 top-1.5 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     exp.current
-                      ? 'border-indigo-500 bg-indigo-500/20'
+                      ? 'border-green-500 bg-green-500/20'
                       : 'border-gray-700 bg-gray-800'
                   }`}
                 >
                   <div
                     className={`w-2 h-2 rounded-full ${
-                      exp.current ? 'bg-indigo-400' : 'bg-gray-600'
+                      exp.current ? 'bg-green-400' : 'bg-gray-600'
                     }`}
                   />
                 </div>
 
-                <div className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-all duration-300">
+                <div className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                     <div>
                       <h3 className="text-white font-semibold text-lg">{exp.role}</h3>
-                      <p className="text-indigo-400 text-sm font-medium">
+                      <p className="text-green-400 text-sm font-medium">
                         {exp.company}{' '}
                         <span className="text-gray-600">/ {exp.location}</span>
                       </p>

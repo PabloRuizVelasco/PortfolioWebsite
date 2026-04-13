@@ -7,82 +7,68 @@ export default function ParticleBackground() {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
     let animationId
-    let particles = []
+    let columns = []
+    let fontSize = 14
 
     const resize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
-    }
-
-    const createParticles = () => {
-      particles = []
-      const count = Math.floor((canvas.width * canvas.height) / 15000)
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 1.5 + 0.5,
-          speedX: (Math.random() - 0.5) * 0.3,
-          speedY: (Math.random() - 0.5) * 0.3,
-          opacity: Math.random() * 0.5 + 0.1,
-        })
-      }
+      const colCount = Math.floor(canvas.width / fontSize)
+      columns = Array.from({ length: colCount }, () =>
+        Math.random() * canvas.height / fontSize
+      )
     }
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      // Semi-transparent black overlay for trail effect
+      ctx.fillStyle = 'rgba(5, 5, 5, 0.06)'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-      particles.forEach((p) => {
-        p.x += p.speedX
-        p.y += p.speedY
+      ctx.font = `${fontSize}px 'JetBrains Mono', monospace`
 
-        if (p.x < 0) p.x = canvas.width
-        if (p.x > canvas.width) p.x = 0
-        if (p.y < 0) p.y = canvas.height
-        if (p.y > canvas.height) p.y = 0
+      columns.forEach((y, i) => {
+        const char = Math.random() > 0.5 ? '1' : '0'
+        const x = i * fontSize
 
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(129, 140, 248, ${p.opacity})`
-        ctx.fill()
-      })
+        // Brighter green for the leading character
+        const brightness = Math.random()
+        if (brightness > 0.95) {
+          ctx.fillStyle = 'rgba(134, 239, 172, 0.9)' // bright tip
+        } else if (brightness > 0.8) {
+          ctx.fillStyle = 'rgba(74, 222, 128, 0.5)'
+        } else {
+          ctx.fillStyle = 'rgba(34, 197, 94, 0.25)'
+        }
 
-      // Draw connections
-      particles.forEach((a, i) => {
-        particles.slice(i + 1).forEach((b) => {
-          const dx = a.x - b.x
-          const dy = a.y - b.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < 120) {
-            ctx.beginPath()
-            ctx.moveTo(a.x, a.y)
-            ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = `rgba(129, 140, 248, ${0.03 * (1 - dist / 120)})`
-            ctx.stroke()
-          }
-        })
+        ctx.fillText(char, x, y * fontSize)
+
+        // Reset column randomly or when it goes off screen
+        if (y * fontSize > canvas.height && Math.random() > 0.975) {
+          columns[i] = 0
+        }
+        columns[i] += 0.5 + Math.random() * 0.5
       })
 
       animationId = requestAnimationFrame(animate)
     }
 
     resize()
-    createParticles()
     animate()
 
-    window.addEventListener('resize', () => {
-      resize()
-      createParticles()
-    })
+    const handleResize = () => resize()
+    window.addEventListener('resize', handleResize)
 
-    return () => cancelAnimationFrame(animationId)
+    return () => {
+      cancelAnimationFrame(animationId)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.4 }}
     />
   )
 }

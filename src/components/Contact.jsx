@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { HiMail, HiLocationMarker, HiPhone } from 'react-icons/hi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
@@ -43,7 +43,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-32 px-6">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-500/5 rounded-full blur-[150px]" />
 
       <div className="max-w-4xl mx-auto relative z-10" ref={ref}>
         <motion.div
@@ -52,7 +52,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono tracking-wider text-indigo-400 uppercase mb-3 block">
+          <span className="text-xs font-mono tracking-wider text-green-400 uppercase mb-3 block">
             Contact
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -77,10 +77,10 @@ export default function Contact() {
                 <Wrapper
                   key={item.label}
                   {...(item.href ? { href: item.href } : {})}
-                  className="group flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-all duration-300"
+                  className="group flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
-                    <item.icon className="text-indigo-400 text-lg" />
+                  <div className="w-11 h-11 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                    <item.icon className="text-green-400 text-lg" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-600 font-mono uppercase tracking-wider">
@@ -100,7 +100,7 @@ export default function Contact() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 text-gray-500 hover:text-white transition-all duration-300 text-sm"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 text-gray-500 hover:text-white transition-all duration-300 text-sm"
                 >
                   <s.icon className="text-base" />
                   {s.label}
@@ -126,7 +126,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 required
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-indigo-500/50 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-green-500/50 focus:outline-none transition-colors"
                 placeholder="Your name"
               />
             </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-indigo-500/50 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-green-500/50 focus:outline-none transition-colors"
                 placeholder="your@email.com"
               />
             </div>
@@ -150,13 +150,13 @@ export default function Contact() {
                 name="message"
                 required
                 rows={4}
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-indigo-500/50 focus:outline-none transition-colors resize-none"
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-sm placeholder:text-gray-700 focus:border-green-500/50 focus:outline-none transition-colors resize-none"
                 placeholder="Your message..."
               />
             </div>
             <button
               type="submit"
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               Send Message
             </button>

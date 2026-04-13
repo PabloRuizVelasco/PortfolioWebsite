@@ -45,14 +45,14 @@ export default function Navbar() {
               className="text-sm text-gray-400 hover:text-white transition-colors duration-200 relative group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-indigo-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-green-400 to-emerald-400 group-hover:w-full transition-all duration-300" />
             </a>
           ))}
           <a
             href="/Pablo_RuizVelasco_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all duration-200"
+            className="text-sm px-4 py-2 rounded-lg bg-green-500/10 text-green-400 border border-green-500/20 hover:bg-green-500/20 hover:border-green-500/40 transition-all duration-200"
           >
             Resume
           </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
               href="/Pablo_RuizVelasco_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm px-4 py-2 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-center"
+              className="text-sm px-4 py-2 rounded-lg bg-green-500/10 text-green-400 border border-green-500/20 text-center"
             >
               Resume
             </a>

@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 bg-grid">
       {/* Ambient glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[128px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] animate-pulse-glow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-[128px] animate-pulse-glow" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[128px] animate-pulse-glow" />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <motion.div
@@ -16,7 +16,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-6"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-indigo-400 border border-indigo-500/20 rounded-full bg-indigo-500/5 uppercase">
+          <span className="inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-green-400 border border-green-500/20 rounded-full bg-green-500/5 uppercase">
             Computer Science @ UT Dallas
           </span>
         </motion.div>
@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="group px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5"
+            className="group px-8 py-3.5 rounded-xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-0.5"
           >
             <span className="flex items-center gap-2">
               <HiMail className="text-lg" />
@@ -102,7 +102,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 hover:text-indigo-400 transition-colors cursor-pointer"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 hover:text-green-400 transition-colors cursor-pointer"
       >
         <span className="text-xs font-mono tracking-wider uppercase">Scroll</span>
         <motion.div

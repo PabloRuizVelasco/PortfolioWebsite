@@ -10,7 +10,7 @@ import ParticleBackground from './components/ParticleBackground'
 
 function App() {
   return (
-    <div className="bg-[#0a0a0f] text-white min-h-screen relative overflow-x-hidden">
+    <div className="bg-[#050505] text-white min-h-screen relative overflow-x-hidden">
       <ParticleBackground />
       <Navbar />
       <main>
