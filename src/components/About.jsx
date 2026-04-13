@@ -67,7 +67,7 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 + 0.2 }}
-              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300 hover:-translate-y-1"
+              className="group relative p-6 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 transition-all duration-300 hover:-translate-y-1"
             >
               <div
                 className={`w-10 h-10 rounded-xl ${item.image ? '' : `bg-gradient-to-br ${item.color}`} flex items-center justify-center mb-4 opacity-80 group-hover:opacity-100 transition-opacity overflow-hidden`}

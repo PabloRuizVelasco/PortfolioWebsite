@@ -77,7 +77,7 @@ export default function Contact() {
                 <Wrapper
                   key={item.label}
                   {...(item.href ? { href: item.href } : {})}
-                  className="group flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300"
+                  className="group flex items-center gap-4 p-5 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 transition-all duration-300"
                 >
                   <div className="w-11 h-11 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
                     <item.icon className="text-green-400 text-lg" />
@@ -100,7 +100,7 @@ export default function Contact() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 text-gray-500 hover:text-white transition-all duration-300 text-sm"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 text-gray-500 hover:text-white transition-all duration-300 text-sm"
                 >
                   <s.icon className="text-base" />
                   {s.label}
@@ -116,7 +116,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             action="https://formspree.io/f/placeholder"
             method="POST"
-            className="space-y-4 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05]"
+            className="space-y-4 p-6 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08]"
           >
             <div>
               <label className="text-xs text-gray-600 font-mono uppercase tracking-wider block mb-1.5">

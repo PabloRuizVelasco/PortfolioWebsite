@@ -91,7 +91,7 @@ export default function Experience() {
                   />
                 </div>
 
-                <div className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300">
+                <div className="group p-6 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                     <div>
                       <h3 className="text-white font-semibold text-lg">{exp.role}</h3>

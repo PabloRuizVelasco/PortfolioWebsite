@@ -33,11 +33,11 @@ export default function ParticleBackground() {
         // Brighter green for the leading character
         const brightness = Math.random()
         if (brightness > 0.95) {
-          ctx.fillStyle = 'rgba(134, 239, 172, 0.9)' // bright tip
+          ctx.fillStyle = 'rgba(134, 239, 172, 0.6)'
         } else if (brightness > 0.8) {
-          ctx.fillStyle = 'rgba(74, 222, 128, 0.5)'
+          ctx.fillStyle = 'rgba(74, 222, 128, 0.3)'
         } else {
-          ctx.fillStyle = 'rgba(34, 197, 94, 0.25)'
+          ctx.fillStyle = 'rgba(34, 197, 94, 0.15)'
         }
 
         ctx.fillText(char, x, y * fontSize)

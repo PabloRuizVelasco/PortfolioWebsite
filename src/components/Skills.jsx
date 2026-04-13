@@ -72,7 +72,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: catIdx * 0.15 + 0.2 }}
-              className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-300"
+              className="p-6 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 transition-all duration-300"
             >
               <h3 className="text-white font-semibold text-lg mb-6">{cat.title}</h3>
               <div className="space-y-5">

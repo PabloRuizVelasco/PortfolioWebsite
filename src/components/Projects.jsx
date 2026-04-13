@@ -75,7 +75,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 + 0.2 }}
-              className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-all duration-500 hover:-translate-y-1"
+              className="group relative p-6 rounded-2xl bg-[#0a0f0a]/80 border border-white/[0.08] hover:border-green-500/20 transition-all duration-500 hover:-translate-y-1"
             >
               {/* Gradient accent line */}
               <div
